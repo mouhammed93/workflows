@@ -30,16 +30,16 @@ jobs:
     - name: Run tests with pytest
       run: |
         pytest
-    # Run tests and create a JUnit XML report
+   
+   # Run tests and create an HTML report
     - name: Run tests with pytest
       run: |
-        pytest --junitxml=report.xml
+        pytest --html=report.html --self-contained-html
 
-    # Step 3: Upload the report file so you can download it later
+    # Upload the HTML report as an Artifact
     - name: Upload Test Report
       uses: actions/upload-artifact@v4
       with:
-        name: pytest-results
-        path: report.xml
-      # This 'if: always()' ensures the report uploads even when tests fail
+        name: html-test-report
+        path: report.html
       if: always()
