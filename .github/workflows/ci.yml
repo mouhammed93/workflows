@@ -43,7 +43,7 @@ jobs:
         # Email content and recipients
         subject: "CI/CD Report: ${{ job.status }} (${{ github.repository }})"
         to: abdellimohamed93@gmail.com        # <--- REPLACE WITH YOUR EMAIL
-        cc: chokrigammoudi@gmail.com   # <--- REPLACE WITH MANAGER'S EMAIL
+        cc: chokri.gammoudi@gmail.com   # <--- REPLACE WITH MANAGER'S EMAIL
         from: "GitHub Actions"
         body: |
           Hello,
