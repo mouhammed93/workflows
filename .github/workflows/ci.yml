@@ -37,8 +37,8 @@ jobs:
         server_address: smtp.gmail.com
         server_port: 465
         secure: true
-        username: ${{ secrets.GMAIL_USERNAME }}
-        password: ${{ secrets.GMAIL_PASSWORD }}
+        username: ${{ secrets.GMAILUSERNAME }}
+        password: ${{ secrets.GMAILPASSWORD }}
         
         # Email content and recipients
         subject: "CI/CD Report: ${{ job.status }} (${{ github.repository }})"
